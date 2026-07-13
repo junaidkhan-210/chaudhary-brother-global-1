@@ -936,3 +936,59 @@ footer{
   /* body {
     padding-top: 100px; 
   } */
+
+
+  /* --- Mobile Responsive Fixes --- */
+
+/* Choti screens (Tablets aur Phones) ke liye */
+@media (max-width: 768px) {
+    
+  /* Header/Navigation ko stack karna */
+  header {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+  }
+
+  nav ul {
+      margin-top: 15px;
+      gap: 15px;
+  }
+
+  /* About section: Image aur content ko stack karna */
+  .about-container {
+      flex-direction: column;
+  }
+
+  /* Services Grid: 1 column mein dikhana */
+  .service-container {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+  }
+
+  /* Contact section: Form aur info stack karna */
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-form {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  /* Gallery images ko adjust karna */
+  .gallery {
+      grid-template-columns: 1fr 1fr; /* Mobile par 2 images side-by-side */
+  }
+}
+
+/* Aur chote phones ke liye (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-content h1 {
+      font-size: 28px;
+  }
+  
+  .gallery {
+      grid-template-columns: 1fr; /* Sirf 1 image line mein */
+  }
+}
