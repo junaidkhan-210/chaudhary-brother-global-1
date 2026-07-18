@@ -113,3 +113,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     
     
     };
+
+
+
+
+
+    const counters = document.querySelectorAll(".counter");
+
+const startCounter = (counter)=>{
+
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || "";
+
+    let count = 0;
+
+    const update = ()=>{
+
+        const increment = Math.ceil(target/100);
+
+        count += increment;
+
+        if(count >= target){
+            counter.innerText = target + suffix;
+        }else{
+            counter.innerText = count + suffix;
+            requestAnimationFrame(update);
+        }
+
+    };
+
+    update();
+
+};
+
+const observer = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            startCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},{threshold:0.5});
+
+counters.forEach(counter=>observer.observe(counter));

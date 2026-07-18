@@ -116,7 +116,7 @@ nav ul li a:hover{
 }
 
 .hero p{
-    color: whitesmoke;
+    color: grey;
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 30px;
@@ -132,7 +132,7 @@ nav ul li a:hover{
     border-radius: 8px;
     transition: 0.3s ease;
     font-weight: 500;
-    margin-top: 40%;
+    margin-top: 10%;
 }
 
 .btn:hover{
@@ -168,6 +168,9 @@ nav ul li a:hover{
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #e06c00;
 }
 
 .about-image img{
@@ -181,7 +184,7 @@ nav ul li a:hover{
 
 .about-content li{
     margin: 5px 0;
-    color: #ddd;
+    color: grey;
 }
 
 
@@ -189,6 +192,7 @@ nav ul li a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    
 }
 
 .service-card{
@@ -197,6 +201,7 @@ nav ul li a:hover{
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+    
 }
 
 .service-card:hover{
@@ -327,10 +332,10 @@ footer{
   }
   
   @keyframes changecommercialBg {
-    0%   { background: url("b1.avif") center/cover no-repeat; }
-    33%  { background: url("b2.avif") center/cover no-repeat; }
-    66%  { background: url("b4.jpeg") center/cover no-repeat; }
-    100% { background: url("b5.jpeg") center/cover no-repeat; }
+    0%   { background: url("build.jpeg") center/cover no-repeat; }
+    33%  { background: url("build2.jpeg") center/cover no-repeat; }
+    66%  { background: url("build3.jpeg") center/cover no-repeat; }
+    100% { background: url("build5.jpeg") center/cover no-repeat; }
   }
   
   
@@ -360,10 +365,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
-    padding-top: 100px; /* creates space below header */
-  
-  
+  body {
+    padding-top: 100px; 
+  }
   
   /* .govt */
   .govt-hero {
@@ -374,10 +378,10 @@ footer{
   }
   
   @keyframes changegovtBg {
-    0%   { background: url("g3.jpeg") center/cover no-repeat; }
-    33%  { background: url("g4.jpeg") center/cover no-repeat; }
-    66%  { background: url("g5.jpeg") center/cover no-repeat; }
-    100% { background: url("g1.jpeg") center/cover no-repeat; }
+    0%   { background: url("govt1.jpeg") center/cover no-repeat; }
+    33%  { background: url("govt2.jpeg") center/cover no-repeat; }
+    66%  { background: url("govt4.jpeg") center/cover no-repeat; }
+    100% { background: url("govt5.jpeg") center/cover no-repeat; }
   }
   
   
@@ -407,10 +411,10 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
   }
-   */
+  
   
   /* .eiw */
   .eiw-hero {
@@ -501,10 +505,10 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
   }
-   */
+  
   
   
   /* ht */
@@ -549,9 +553,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
-    padding-top: inherit; 
-  } */
+  body {
+    padding-top: 100px; 
+  }
   
   
   
@@ -597,9 +601,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   
   /* csw */
@@ -644,9 +648,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   
   /* ief */
@@ -691,9 +695,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   /* rdi */
   .ief-hero {
@@ -737,9 +741,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   /* sec */
   .sec-hero {
@@ -750,9 +754,9 @@ footer{
   }
   
   @keyframes changesecBg {
-    0%   { background: url("ser1.avif") center/cover no-repeat; }
+    0%   { background: url("ser3.avif") center/cover no-repeat; }
     33%  { background: url("ser2.avif") center/cover no-repeat; }
-    66%  { background: url("ser3.avif") center/cover no-repeat; }
+    66%  { background: url("ser1.avif") center/cover no-repeat; }
     100% { background: url("ser4.avif") center/cover no-repeat; }
   }
   
@@ -783,9 +787,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   
   /* acc */
@@ -833,10 +837,10 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
   }
-   */
+  
   
   /* isf */
   .isf-hero {
@@ -883,9 +887,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
+  body {
     padding-top: 100px; 
-  } */
+  }
   
   
   /* wsi */
@@ -933,9 +937,9 @@ footer{
     font-size: 1.2rem;
   }
   
-  /* body {
-    padding-top: 100px; 
-  } */
+  body {
+    padding-top: 50px; 
+  }
 
 
   /* --- Mobile Responsive Fixes --- */
@@ -992,3 +996,60 @@ footer{
       grid-template-columns: 1fr; /* Sirf 1 image line mein */
   }
 }
+
+
+/* ===========================
+   COMPANY STATS
+=========================== */
+
+.stats{
+  background:#0b0b0b;
+  padding:5px 5px;
+}
+
+.stats-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.stat-box{
+  text-align:center;
+}
+
+.stat-box h2{
+  color:#d4af37;
+  font-size:55px;
+  margin-bottom:15px;
+  font-weight:700;
+}
+
+.stat-box p{
+  color:#bdbdbd;
+  letter-spacing:3px;
+  font-size:14px;
+}
+
+@media(max-width:992px){
+
+.stats-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.stats-container{
+grid-template-columns:1fr;
+}
+
+.stat-box h2{
+font-size:40px;
+}
+
+}
+
+
