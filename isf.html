@@ -3,28 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <title>Industrial Shed & Factory Construction - Chaudhary Brothers Global Pvt. Limited</title>
   <link rel="stylesheet" href="cbgpl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* 1. Hero Section Container */
+    .isf-hero {
+      position: relative;
+      height: calc(100vh - 90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* 2. Smooth Background Slideshow for 5 Images */
+    .isf-hero::before,
+    .isf-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .isf-hero::before {
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ss1.webp');
+      animation: fadeImg1 25s infinite;
+    }
+
+    .isf-hero::after {
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ss2.webp');
+      animation: fadeImg2 25s infinite;
+    }
+
+    .isf-bg-3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ss3.avif');
+      animation: fadeImg3 25s infinite;
+    }
+
+    .isf-bg-4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ss4.avif');
+      animation: fadeImg4 25s infinite;
+    }
+
+    .isf-bg-5 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ss5.avif');
+      animation: fadeImg5 25s infinite;
+    }
+
+    @keyframes fadeImg1 {
+      0%   { opacity: 1; }
+      16%  { opacity: 1; }
+      20%  { opacity: 0; }
+      96%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeImg2 {
+      0%   { opacity: 0; }
+      16%  { opacity: 0; }
+      20%  { opacity: 1; }
+      36%  { opacity: 1; }
+      40%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg3 {
+      0%   { opacity: 0; }
+      36%  { opacity: 0; }
+      40%  { opacity: 1; }
+      56%  { opacity: 1; }
+      60%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg4 {
+      0%   { opacity: 0; }
+      56%  { opacity: 0; }
+      60%  { opacity: 1; }
+      76%  { opacity: 1; }
+      80%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg5 {
+      0%   { opacity: 0; }
+      76%  { opacity: 0; }
+      80%  { opacity: 1; }
+      96%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="logo">
     <i class="fa-solid fa-building"></i>
-    Chaudhary Brothers Global Pvt. Limited
+    <span>Chaudhary Brothers Global</span>
   </div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Back to Services</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="isf-hero">
-  <div class="overlay"></div>
+  <div class="isf-bg-3"></div>
+  <div class="isf-bg-4"></div>
+  <div class="isf-bg-5"></div>
   <div class="hero-content">
-
-
     <h1>Industrial Shed & Factory Construction</h1>
     <p>Delivering modern, durable, and high-quality commercial spaces.</p>
+    <div style="margin-top: 25px;"><a href="index.html#contact" class="btn">Enquire Now</a></div>
   </div>
-
-  
 </section>
 
 </body>

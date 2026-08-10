@@ -3,28 +3,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <title>Transformer Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="cbgpl.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Header / Navbar */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .logo i {
+      color: #ff6600;
+      font-size: 1.5rem;
+    }
+
+    /* Hero Section */
+    .ts-hero {
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('t5.avif') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .ts-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .ts-hero h1 span {
+      color: #ff6600;
+    }
+
+    .ts-hero p {
+      font-size: 1.2rem;
+      color: #dddddd;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    /* Project Gallery Section */
+    .project-showcase {
+      padding: 80px 20px;
+      background-color: #121212;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-showcase h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #ff6600;
+    }
+
+    .project-showcase p.section-desc {
+      font-size: 1.1rem;
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .image-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: #1e1e1e;
+      text-align: left;
+    }
+
+    .image-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 102, 0, 0.2);
+      border-color: #ff6600;
+    }
+
+    .image-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .image-caption {
+      padding: 20px;
+    }
+    
+    .image-caption h3 {
+      color: #ffffff;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    
+    .image-caption p {
+      color: #aaaaaa;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="logo">
     <i class="fa-solid fa-building"></i>
-    Chaudhary Brothers Global Pvt. Limited
+    <span>Chaudhary Brothers Global Pvt. Limited</span>
   </div>
 </header>
 
+<!-- Hero Section -->
 <section class="ts-hero">
-  <div class="overlay"></div>
   <div class="hero-content">
-
-
-    <h1>Transformer Supply, Installation & Commissioning</h1>
-    <p>Delivering modern, durable, and high-quality commercial spaces.</p>
+    <h1>Transformer Supply, Installation & <span>Commissioning</span></h1>
+    <p>Delivering modern, durable, and high-quality commercial spaces and industrial power infrastructure solutions.</p>
   </div>
+</section>
 
-  
+<!-- Project Gallery Section with all images -->
+<section class="project-showcase">
+  <div class="container">
+    <h2>Our Transformer Projects</h2>
+    <p class="section-desc">A comprehensive showcase of our expertise in high-voltage transformer installation, substation setup, and electrical commissioning.</p>
+    
+    <div class="image-grid">
+      <!-- Item 1: t1.webp -->
+      <div class="image-item">
+        <img src="t1.webp" alt="Transformer Installation">
+        <div class="image-caption">
+          <h3>Advanced Power Substation</h3>
+          <p>Professional deployment and integration of heavy-duty industrial transformers.</p>
+        </div>
+      </div>
+
+      <!-- Item 2: t2.avif -->
+      <div class="image-item">
+        <img src="t2.avif" alt="Substation Setup">
+        <div class="image-caption">
+          <h3>Grid Interconnection & Setup</h3>
+          <p>Seamless power grid connectivity and structural alignment for transformers.</p>
+        </div>
+      </div>
+
+      <!-- Item 3: t3.avif -->
+      <div class="image-item">
+        <img src="t3.avif" alt="High Capacity Transformer">
+        <div class="image-caption">
+          <h3>High-Capacity Power Unit</h3>
+          <p>Rigorous testing and mechanical positioning of massive electrical systems.</p>
+        </div>
+      </div>
+
+      <!-- Item 4: t4.avif -->
+      <div class="image-item">
+        <img src="t4.avif" alt="Industrial Transformer Maintenance">
+        <div class="image-caption">
+          <h3>Industrial Infrastructure Setup</h3>
+          <p>Complete execution of commercial power systems and safety frameworks.</p>
+        </div>
+      </div>
+
+      <!-- Item 5: t5.avif -->
+      <div class="image-item">
+        <img src="t5.avif" alt="Transformer Commissioning">
+        <div class="image-caption">
+          <h3>Final Commissioning & Testing</h3>
+          <p>End-to-end electrical testing ensuring optimal performance and compliance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </body>

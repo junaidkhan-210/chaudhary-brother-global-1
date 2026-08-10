@@ -3,28 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <title>Agriculture & Cold Chain - Chaudhary Brothers Global Pvt. Limited</title>
   <link rel="stylesheet" href="cbgpl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Background Image Slider for all 6 images */
+    .acc-hero {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: heroImageSlider 24s infinite ease-in-out;
+    }
+
+    @keyframes heroImageSlider {
+      0%   { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag1.avif'); }
+      16.6% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag2.avif'); }
+      33.3% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag3.avif'); }
+      50%   { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag4.avif'); }
+      66.6% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag5.avif'); }
+      83.3% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag6.avif'); }
+      100%  { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('ag1.avif'); }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="logo">
     <i class="fa-solid fa-building"></i>
-    Chaudhary Brothers Global Pvt. Limited
+    <span>Chaudhary Brothers Global</span>
   </div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Back to Services</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section class="acc-hero">
-  <div class="overlay"></div>
+<section class="acc-hero hero">
   <div class="hero-content">
-
-
     <h1>Agriculture & Cold Chain Infrastructure Development</h1>
     <p>Delivering modern, durable, and high-quality commercial spaces.</p>
+    <div><a href="index.html#contact" class="btn">Enquire Now</a></div>
   </div>
-
-  
 </section>
 
 </body>

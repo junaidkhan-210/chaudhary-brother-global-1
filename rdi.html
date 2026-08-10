@@ -3,28 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <title>Road, Drainage & Infrastructure Development - Chaudhary Brothers Global Pvt. Limited</title>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="cbgpl.css">
+  <style>
+    /* Hero section with first image */
+    .ief-hero {
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('r1.webp') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 20px;
+    }
+
+    /* Project Showcase Section */
+    .project-showcase {
+      padding: 80px 20px;
+      background-color: #121212;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .project-showcase .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-showcase h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #ff6600;
+    }
+
+    .project-showcase p {
+      font-size: 1.1rem;
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Image Grid Layout for 9 images */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .image-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: #1e1e1e;
+      text-align: left;
+    }
+
+    .image-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 102, 0, 0.2);
+      border-color: #ff6600;
+    }
+
+    .image-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .image-caption {
+      padding: 20px;
+    }
+    
+    .image-caption h3 {
+      color: #ffffff;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    
+    .image-caption p {
+      color: #aaaaaa;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="logo">
     <i class="fa-solid fa-building"></i>
-    Chaudhary Brothers Global Pvt. Limited
+    <span>Chaudhary Brothers Global Pvt. Limited</span>
   </div>
 </header>
 
+<!-- Hero Section with r1.webp background -->
 <section class="ief-hero">
-  <div class="overlay"></div>
   <div class="hero-content">
-
-
-    <h1>Road, Drainage & Infrastructure Development</h1>
-    <p>Delivering modern, durable, and high-quality commercial spaces.</p>
+    <h1 style="font-size: 2.8rem; margin-bottom: 15px; font-weight: 700;">Road, Drainage & Infrastructure Development</h1>
+    <p style="font-size: 1.2rem; color: #dddddd; max-width: 700px; margin: 0 auto;">Delivering modern, durable, and high-quality infrastructure solutions for sustainable growth.</p>
   </div>
+</section>
 
-  
+<!-- Project Gallery Section with all 9 images -->
+<section class="project-showcase">
+  <div class="container">
+    <h2>Our Project Gallery</h2>
+    <p>A comprehensive showcase of our extensive expertise in constructing robust roadways, efficient urban drainage frameworks, and large-scale public infrastructures.</p>
+    
+    <div class="image-grid">
+      <!-- Project 1 (r1.webp) -->
+      <div class="image-item">
+        <img src="r1.webp" alt="Road Infrastructure">
+        <div class="image-caption">
+          <h3>Highway & Road Networks</h3>
+          <p>Building high-durability tarmac and concrete roads for smooth transit.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 (r2.avif) -->
+      <div class="image-item">
+        <img src="r2.avif" alt="Drainage System">
+        <div class="image-caption">
+          <h3>Advanced Drainage Systems</h3>
+          <p>Efficient storm-water management and modern canal setups.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 (r3.avif) -->
+      <div class="image-item">
+        <img src="r3.avif" alt="Infrastructure Development">
+        <div class="image-caption">
+          <h3>Urban Infrastructure</h3>
+          <p>Executing critical public sector developments and civil engineering works.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 (r4.avif) -->
+      <div class="image-item">
+        <img src="r4.avif" alt="Bridge and Structural Works">
+        <div class="image-caption">
+          <h3>Structural & Bridge Works</h3>
+          <p>Engineering safe, resilient structures to connect communities seamlessly.</p>
+        </div>
+      </div>
+
+      <!-- Project 5 (r5.avif) -->
+      <div class="image-item">
+        <img src="r5.avif" alt="Site Execution">
+        <div class="image-caption">
+          <h3>On-Site Execution & Machinery</h3>
+          <p>Deployed with advanced heavy machinery and professional engineering teams.</p>
+        </div>
+      </div>
+
+      <!-- Project 6 (r6.avif) -->
+      <div class="image-item">
+        <img src="r6.avif" alt="Completed Project Overview">
+        <div class="image-caption">
+          <h3>Completed Project Overview</h3>
+          <p>High-standard completion adhering to stringent safety and quality guidelines.</p>
+        </div>
+      </div>
+
+      <!-- Project 7 (r7.avif) -->
+      <div class="image-item">
+        <img src="r7.avif" alt="Advanced Engineering Works">
+        <div class="image-caption">
+          <h3>Heavy Engineering & Civil Works</h3>
+          <p>Specialized heavy civil construction focusing on long-term durability.</p>
+        </div>
+      </div>
+
+      <!-- Project 8 (r8.avif) -->
+      <div class="image-item">
+        <img src="r8.avif" alt="Infrastructure Excellence">
+        <div class="image-caption">
+          <h3>Modern Infrastructure Solutions</h3>
+          <p>Delivering state-of-the-art public works with precision engineering.</p>
+        </div>
+      </div>
+
+      <!-- Project 9 (r9.avif) -->
+      <div class="image-item">
+        <img src="r9.avif" alt="Final Project Showcase">
+        <div class="image-caption">
+          <h3>Excellence in Execution</h3>
+          <p>Committed to building superior developmental projects across sectors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </body>

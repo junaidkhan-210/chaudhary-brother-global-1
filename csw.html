@@ -3,30 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Projects - Chaudhary Brothers Global Pvt. Limited</title>
+  <title>Cold Storage & Warehouse Construction - Chaudhary Brothers Global Pvt. Limited</title>
   <link rel="stylesheet" href="cbgpl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Background Image Slider for all 6 images */
+    .csh-hero {
+      position: relative;
+      height: calc(100vh - 90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: cshSlider 30s infinite ease-in-out;
+    }
+
+    @keyframes cshSlider {
+      0%    { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c1.avif'); }
+      16.6% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c2.avif'); }
+      33.3% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c3.avif'); }
+      50%   { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c4.avif'); }
+      66.6% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c5.avif'); }
+      83.3% { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c6.avif'); }
+      100%  { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('c1.avif'); }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <div class="logo">
     <i class="fa-solid fa-building"></i>
-    Chaudhary Brothers Global Pvt. Limited
+    <span>Chaudhary Brothers Global</span>
   </div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Back to Services</a></li>
+    </ul>
+  </nav>
 </header>
-
-
 
 <section class="csh-hero">
   <div class="overlay"></div>
   <div class="hero-content">
-
-
     <h1>Cold Storage & Warehouse Construction</h1>
     <p>Delivering modern, durable, and high-quality commercial spaces.</p>
+    <div style="margin-top: 25px;"><a href="index.html#contact" class="btn">Enquire Now</a></div>
   </div>
-
-  
 </section>
 
 </body>
