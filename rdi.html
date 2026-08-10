@@ -8,6 +8,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="cbgpl.css">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Header / Navbar */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .logo i {
+      color: #ff6600;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
     /* Hero section with first image */
     .ief-hero {
       position: relative;
@@ -19,6 +69,12 @@
       text-align: center;
       color: #ffffff;
       padding: 0 20px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
     }
 
     /* Project Showcase Section */
@@ -40,7 +96,7 @@
       color: #ff6600;
     }
 
-    .project-showcase p {
+    .project-showcase p.section-desc {
       font-size: 1.1rem;
       color: #cccccc;
       line-height: 1.6;
@@ -105,11 +161,17 @@
 </head>
 <body>
 
-<header class="header">
+<header>
   <div class="logo">
     <i class="fa-solid fa-building"></i>
     <span>Chaudhary Brothers Global Pvt. Limited</span>
   </div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Back to Services</a></li>
+    </ul>
+  </nav>
 </header>
 
 <!-- Hero Section with r1.webp background -->
@@ -124,7 +186,7 @@
 <section class="project-showcase">
   <div class="container">
     <h2>Our Project Gallery</h2>
-    <p>A comprehensive showcase of our extensive expertise in constructing robust roadways, efficient urban drainage frameworks, and large-scale public infrastructures.</p>
+    <p class="section-desc">A comprehensive showcase of our extensive expertise in constructing robust roadways, efficient urban drainage frameworks, and large-scale public infrastructures.</p>
     
     <div class="image-grid">
       <!-- Project 1 (r1.webp) -->

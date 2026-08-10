@@ -8,17 +8,212 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="cbgpl.css">
   <style>
-    /* Hero section with first solar image */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    /* Header / Navbar */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .logo i {
+      color: #ff6600;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
+    /* 1. Hero Section Container with Slideshow */
     .slr-hero {
       position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('s1.avif') no-repeat center center/cover;
       height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #ffffff;
+      overflow: hidden;
+      color: #fff;
       padding: 0 20px;
+    }
+
+    /* 2. Smooth Background Slideshow */
+    .slr-hero::before,
+    .slr-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .slr-hero::before {
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('s1.avif');
+      animation: fadeImg1 25s infinite;
+    }
+
+    .slr-hero::after {
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('s2.avif');
+      animation: fadeImg2 25s infinite;
+    }
+
+    .slr-bg-3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('s3.png');
+      animation: fadeImg3 25s infinite;
+    }
+
+    .slr-bg-4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('s4.avif');
+      animation: fadeImg4 25s infinite;
+    }
+
+    .slr-bg-5 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('s5.avif');
+      animation: fadeImg5 25s infinite;
+    }
+
+    @keyframes fadeImg1 {
+      0%   { opacity: 1; }
+      18%  { opacity: 1; }
+      22%  { opacity: 0; }
+      96%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeImg2 {
+      0%   { opacity: 0; }
+      18%  { opacity: 0; }
+      22%  { opacity: 1; }
+      40%  { opacity: 1; }
+      44%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg3 {
+      0%   { opacity: 0; }
+      40%  { opacity: 0; }
+      44%  { opacity: 1; }
+      62%  { opacity: 1; }
+      66%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg4 {
+      0%   { opacity: 0; }
+      62%  { opacity: 0; }
+      66%  { opacity: 1; }
+      84%  { opacity: 1; }
+      88%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fadeImg5 {
+      0%   { opacity: 0; }
+      84%  { opacity: 0; }
+      88%  { opacity: 1; }
+      96%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .slr-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .slr-hero p {
+      font-size: 1.2rem;
+      color: #dddddd;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff6600;
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e55b00;
     }
 
     /* Project Showcase Section */
@@ -40,7 +235,7 @@
       color: #ff6600;
     }
 
-    .project-showcase p {
+    .project-showcase p.section-desc {
       font-size: 1.1rem;
       color: #cccccc;
       line-height: 1.6;
@@ -105,29 +300,39 @@
 </head>
 <body>
 
-<header class="header">
+<header>
   <div class="logo">
     <i class="fa-solid fa-building"></i>
     <span>Chaudhary Brothers Global Pvt. Limited</span>
   </div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Back to Services</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- Hero Section with s1.avif -->
+<!-- Hero Section with Background Slideshow -->
 <section class="slr-hero">
+  <div class="slr-bg-3"></div>
+  <div class="slr-bg-4"></div>
+  <div class="slr-bg-5"></div>
   <div class="hero-content">
-    <h1 style="font-size: 2.8rem; margin-bottom: 15px; font-weight: 700;">Solar Power Projects</h1>
-    <p style="font-size: 1.2rem; color: #dddddd; max-width: 700px; margin: 0 auto;">Delivering modern, sustainable, and high-efficiency renewable energy infrastructure solutions.</p>
+    <h1>Solar Power Projects</h1>
+    <p>Delivering modern, sustainable, and high-efficiency renewable energy infrastructure solutions.</p>
+    <div><a href="index.html#contact" class="btn">Enquire Now</a></div>
   </div>
 </section>
 
-<!-- Project Gallery Section with s3.png placed upfront -->
+<!-- Project Gallery Section -->
 <section class="project-showcase">
   <div class="container">
     <h2>Our Project Gallery</h2>
-    <p>A comprehensive showcase of our expertise in executing utility-scale solar power installations, renewable energy frameworks, and green energy developments.</p>
+    <p class="section-desc">A comprehensive showcase of our expertise in executing utility-scale solar power installations, renewable energy frameworks, and green energy developments.</p>
     
     <div class="image-grid">
-      <!-- Project 1 (s3.png - Upr add kar diya gaya hai) -->
+      <!-- Project 1 (s3.png) -->
       <div class="image-item">
         <img src="s3.png" alt="Solar Mounting Structure">
         <div class="image-caption">
