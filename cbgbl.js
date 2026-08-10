@@ -96,3 +96,25 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold: 0.5});
 
 counters.forEach(counter => observer.observe(counter));
+
+
+
+// Mobile Hamburger Toggle Functionality
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('nav ul.nav-list') || document.querySelector('nav');
+
+if (mobileMenu && navList) {
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        const isExpanded = navList.classList.contains('active');
+        mobileMenu.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close menu when clicking any nav link on mobile
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
