@@ -11,6 +11,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Mobile Hamburger Toggle Functionality
+const mobileMenu = document.getElementById('mobile-menu');
+const navContainer = document.querySelector('.nav-container');
+
+if (mobileMenu && navContainer) {
+    mobileMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navContainer.classList.toggle('active');
+        const isExpanded = navContainer.classList.contains('active');
+        mobileMenu.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close menu when clicking any nav link on mobile
+    document.querySelectorAll('.nav-list li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navContainer.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navContainer.contains(e.target) && !mobileMenu.contains(e.target)) {
+            navContainer.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
 // Contact Form Alert
 const form = document.querySelector(".contact-form");
 if(form){
@@ -96,25 +125,3 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold: 0.5});
 
 counters.forEach(counter => observer.observe(counter));
-
-
-
-// Mobile Hamburger Toggle Functionality
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('nav ul.nav-list') || document.querySelector('nav');
-
-if (mobileMenu && navList) {
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-        const isExpanded = navList.classList.contains('active');
-        mobileMenu.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Close menu when clicking any nav link on mobile
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('active');
-            mobileMenu.setAttribute('aria-expanded', 'false');
-        });
-    });
-}
