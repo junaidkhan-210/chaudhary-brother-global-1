@@ -1,136 +1,78 @@
 // Smooth scroll effect for navigation links
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
     anchor.addEventListener('click', function (e) {
-    
         e.preventDefault();
-    
-        document.querySelector(
-            this.getAttribute('href')
-        ).scrollIntoView({
-            behavior: 'smooth'
-        });
-    
-    });
-    
-    });
-    
-    // Contact Form Alert
-    
-    const form = document.querySelector(".contact-form");
-    
-    if(form){
-    
-    form.addEventListener("submit", function(e){
-    
-        e.preventDefault();
-    
-        alert(
-            "Thank you! Your message has been sent successfully."
-        );
-    
-        form.reset();
-    
-    });
-    
-    }
-    
-    // Sticky Header Shadow
-    
-    window.addEventListener("scroll", () => {
-    
-    const header =
-        document.querySelector("header");
-    
-    if(window.scrollY > 50){
-    
-        header.style.boxShadow =
-            "0 5px 15px rgba(0,0,0,0.4)";
-    
-    }else{
-    
-        header.style.boxShadow = "none";
-    
-    }
-    
-    });
-    
-    // Fade In Animation
-    
-    const revealElements = document.querySelectorAll(
-    ".service-card, .gallery img, .about-content, .contact-form"
-    );
-    
-    function revealOnScroll(){
-    
-    revealElements.forEach(element => {
-    
-        const windowHeight =
-            window.innerHeight;
-    
-        const elementTop =
-            element.getBoundingClientRect().top;
-    
-        if(elementTop < windowHeight - 100){
-    
-            element.style.opacity = "1";
-            element.style.transform =
-                "translateY(0)";
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
-    
     });
-    
+});
+
+// Contact Form Alert
+const form = document.querySelector(".contact-form");
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Thank you! Your message has been sent successfully.");
+        form.reset();
+    });
+}
+
+// Sticky Header Shadow
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if(header) {
+        if(window.scrollY > 50){
+            header.style.boxShadow = "0 5px 15px rgba(0,0,0,0.4)";
+        }else{
+            header.style.boxShadow = "none";
+        }
     }
-    
+});
+
+// Fade In Animation
+const revealElements = document.querySelectorAll(
+    ".service-card, .gallery img, .about-content, .contact-form"
+);
+
+function revealOnScroll(){
     revealElements.forEach(element => {
-    
-    element.style.opacity = "0";
-    
-    element.style.transform =
-        "translateY(40px)";
-    
-    element.style.transition =
-        "all 0.8s ease";
-    
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+        }
     });
-    
-    window.addEventListener(
-    "scroll",
-    revealOnScroll
-    );
-    
-    revealOnScroll();
-    
-    // Welcome Message
-    
-    window.onload = function(){
-    
-    
-    console.log(
-        "Chaudhary Brothers Global Pvt. Limited Website Loaded Successfully"
-    );
-    
-    
-    };
+}
 
+revealElements.forEach(element => {
+    element.style.opacity = "0";
+    element.style.transform = "translateY(40px)";
+    element.style.transition = "all 0.8s ease";
+});
 
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
+// Welcome Message
+window.onload = function(){
+    console.log("Chaudhary Brothers Global Pvt. Limited Website Loaded Successfully");
+};
 
-
-    const counters = document.querySelectorAll(".counter");
+// Animated Statistics Counters
+const counters = document.querySelectorAll(".counter");
 
 const startCounter = (counter)=>{
-
     const target = +counter.dataset.target;
     const suffix = counter.dataset.suffix || "";
-
     let count = 0;
 
     const update = ()=>{
-
-        const increment = Math.ceil(target/100);
-
+        const increment = Math.ceil(target / 100);
         count += increment;
 
         if(count >= target){
@@ -139,27 +81,18 @@ const startCounter = (counter)=>{
             counter.innerText = count + suffix;
             requestAnimationFrame(update);
         }
-
     };
 
     update();
-
 };
 
 const observer = new IntersectionObserver(entries=>{
-
     entries.forEach(entry=>{
-
         if(entry.isIntersecting){
-
             startCounter(entry.target);
-
             observer.unobserve(entry.target);
-
         }
-
     });
+},{threshold: 0.5});
 
-},{threshold:0.5});
-
-counters.forEach(counter=>observer.observe(counter));
+counters.forEach(counter => observer.observe(counter));

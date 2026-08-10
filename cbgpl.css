@@ -509,78 +509,22 @@ footer p {
     }
 }
 
-
-
-
 /* Responsive Styles for Mobile and Tablets */
 @media screen and (max-width: 768px) {
-  /* Header & Navigation */
   header {
-    flex-direction: column;
+    flex-direction: row; /* Header elements row mein rahenge, logo left aur menu icon right */
     padding: 15px 20px;
     gap: 15px;
-    text-align: center;
+    justify-content: space-between;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  nav ul li a {
-    font-size: 0.9rem;
-  }
-
-  /* Hero Section */
-  [class$="-hero"], .ief-hero, .slr-hero, .ts-hero, .wsi-hero {
-    height: 60vh;
-    padding: 0 15px;
-  }
-
-  .hero-content h1, 
-  [class$="-hero"] h1 {
-    font-size: 2rem !important;
-    line-height: 1.2;
-  }
-
-  .hero-content p, 
-  [class$="-hero"] p {
-    font-size: 1rem !important;
-  }
-
-  /* Project Showcase & Sections */
-  .project-showcase {
-    padding: 50px 15px;
-  }
-
-  .project-showcase h2 {
-    font-size: 2rem;
-  }
-
-  .project-showcase p.section-desc {
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-
-  /* Image Grid - Single column on mobile */
-  .image-grid {
+  .about-container,
+  .contact-container {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .image-item img {
-    height: 240px;
   }
 }
 
-/* Extra small devices (Phones under 480px) */
 @media screen and (max-width: 480px) {
-  .hero-content h1, 
-  [class$="-hero"] h1 {
-    font-size: 1.6rem !important;
-  }
-
   header {
     padding: 12px 15px;
   }
